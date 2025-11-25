@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto+Serif:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700&family=Sedan+SC&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header
+      class="w-full bg-[#00C3D0] text-white p-4 flex justify-between items-center shadow-lg"
+    >
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+        <h1 class="font-roboto_slab text-xl font-bold">Register Now </h1>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="index.html">
+          <button
+            id="open-register"
+            class="bg-white text-[#00C3D0] px-4 py-2 rounded hover:bg-gray-100 transition"
+          >
+            Register
+          </button>
+        </a>
+        <a href="list.html">
+          <button
+            id="open-userlist"
+            class="bg-white text-[#00C3D0] px-4 py-2 rounded hover:bg-gray-100 transition"
+          >
+            User List
+          </button>
+        </a>
+      </div>
+    </header>
+    <div class="container mx-auto">
+      <div class="bg-white p-6 shadow-lg">
+        <h2 class="font-roboto_slab font-bold text-lg mb-4">
+          Registered Users
+        </h2>
+        <div class="overflow-x-auto">
+          <table
+            class="w-full table-auto border-collapse border border-gray-200"
+          >
+            <thead>
+              <tr class="bg-[#00C3D0] text-white">
+                <th class="p-3 text-left">ID</th>
+                <th class="p-3 text-left">Name</th>
+                <th class="p-3 text-left">Email</th>
+                <th class="p-3 text-left">Phone</th>
+                <th class="p-3 text-left">Role</th>
+                <th class="p-3 text-left">Address</th>
+                <th class="p-3 text-left">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="usersBody">
+              <tr>
+                <td colspan="7" class="text-center text-gray-500 p-3">
+                  Loading...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      id="modal"
+      class="hidden fixed inset-0 bg-black/50 flex justify-center items-center z-50"
+    >
+      <div class="bg-white p-6 rounded-3xl shadow-lg w-full max-w-md relative">
+        <button
+          id="closeModal"
+          class="absolute right-4 top-4 text-2xl cursor-pointer"
+        >
+          <i class="fa-regular fa-circle-xmark"></i>
+        </button>
+        <div id="modalContent" class="font-roboto"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto+Serif:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700&family=Sedan+SC&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header
+      class="w-full bg-[#00C3D0] text-white p-4 flex justify-between items-center shadow-lg"
+    >
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+        <h1 class="font-roboto_slab text-xl font-bold">Register Now</h1>
+      </div>
+      <div class="flex items-center gap-3">
+        <button
+          id="open-register"
+          class="bg-white text-[#00C3D0] px-4 py-2 rounded hover:bg-gray-100 transition"
+        >
+          Register
+        </button>
+        <a href="list.html">
+          <button
+            id="open-userlist"
+            class="bg-white text-[#00C3D0] px-4 py-2 rounded hover:bg-gray-100 transition"
+          >
+            User List
+          </button>
+        </a>
+      </div>
+    </header>
+    <div class="flex justify-center">
+      <img
+        src="https://img.freepik.com/premium-vector/register-now-icon-comic-style-registration-cartoon-vector-illustration-isolated-background-member-notification-splash-effect-sign-business-concept_157943-15716.jpg"
+        alt=""
+      />
+    </div>
+    <div
+      id="register-popup"
+      class="hidden bg-[#E4FFFC]/80 fixed inset-0 flex justify-center items-center z-50"
+    >
+      <div
+        class="bg-white p-9 sm:p-9 rounded-3xl w-full max-w-md shadow-lg relative"
+      >
+        <button
+          id="close"
+          class="cursor-pointer absolute right-3 top-3 text-3xl"
+        >
+          <i class="fa-regular fa-circle-xmark"></i>
+        </button>
+        <h1
+          class="font-roboto_slab font-bold text-center text-lg sm:text-xl mb-2"
+        >
+          Register Now
+        </h1>
+        <div class="relative mb-1">
+          <i
+            class="fa-solid fa-user absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+          ></i>
+          <input
+            id="name"
+            type="text"
+            placeholder="Name"
+            class="w-full p-3 pl-10 border border-[#00C3D0] rounded"
+          />
+        </div>
+        <p id="name-error" class="text-red-500 text-sm mb-3 hidden"></p>
+        <div class="relative mb-1">
+          <i
+            class="fa-solid fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+          ></i>
+          <input
+            id="email"
+            type="email"
+            placeholder="Email"
+            class="w-full p-3 pl-10 border border-[#00C3D0] rounded"
+          />
+        </div>
+        <p id="email-error" class="text-red-500 text-sm mb-3 hidden"></p>
+        <div class="relative mb-1">
+          <i
+            class="fa-solid fa-phone absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+          ></i>
+          <input
+            id="phone"
+            type="text"
+            placeholder="Phone Number"
+            class="w-full p-3 pl-10 border border-[#00C3D0] rounded"
+          />
+        </div>
+        <p id="phone-error" class="text-red-500 text-sm mb-3 hidden"></p>
+        <div class="relative mb-1">
+          <i
+            class="fa-solid fa-map-marker-alt absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+          ></i>
+          <input
+            id="address"
+            type="text"
+            placeholder="Address"
+            class="w-full p-3 pl-10 border border-[#00C3D0] rounded"
+          />
+        </div>
+        <p id="confirm-error" class="text-red-500 text-sm mb-3 hidden"></p>
+        <select
+          id="role"
+          class="border border-[#00C3D0] w-full rounded p-3 mb-1"
+        >
+          <option value="" disabled selected>Role</option>
+          <option value="Student">Student</option>
+          <option value="Instructor">Instructor</option>
+          <option value="Admin">Admin</option>
+        </select>
+        <p id="role-error" class="text-red-500 text-sm mb-3 hidden"></p>
+        <button
+          id="register-btn"
+          class="w-full p-3 cursor-pointer text-center border border-black bg-[#00C3D0] text-white rounded mb-2 transform transition-all duration-400 hover:scale-95"
+        >
+          Register
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
