@@ -72,4 +72,4 @@ node index.js
 ```bash
 https://registrationbackend-api.onrender.com/api/users
 ```
-![RegistrationWithBackend](Working Database.png)
+![RegistrationWithBackend](Working_Database.png)
